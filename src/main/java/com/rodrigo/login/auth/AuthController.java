@@ -66,7 +66,7 @@ public class AuthController {
     public ResponseEntity<Map<String, String>> logout() {
         ResponseCookie cookie = ResponseCookie.from("accessToken", "")
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(0)
                 .sameSite("Lax")
